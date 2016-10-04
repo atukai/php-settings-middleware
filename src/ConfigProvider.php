@@ -33,6 +33,9 @@ class ConfigProvider
                 'display_errors'         => false,
                 'max_execution_time'     => 30,
                 'date.timezone'          => 'UTC',
+
+                // Route-specific php settings
+                'routes' => [],
             ],
 
         ];

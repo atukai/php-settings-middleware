@@ -29,4 +29,11 @@ To configure the php settings as you required, add the following to your config 
     'display_errors'             => true,
     'max_execution_time'         => 30,
     'date.timezone'              => 'UTC',
+    
+    'routes' => [
+        'home' => [
+            'memory_limit'       => '32M',
+            'max_execution_time' => '60',
+        ],
+    ],
 ]
