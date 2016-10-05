@@ -24,16 +24,7 @@ under `php_setting` key:
         ],
     ],
 ]
-
-Or include config from ConfigProvider.php. Recommend to use [Expressive Configuration Manager] 
-   (https://github.com/mtymek/expressive-config-manager)
-   
-   ```php
-   $configManager = new ConfigManager([
-       ...,
-       \At\PhpSettings\ConfigProvider::class,
-   ]);
-   ``` 
+``` 
 
 Add factory to container config
 ```

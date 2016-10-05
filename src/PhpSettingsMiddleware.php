@@ -1,6 +1,6 @@
 <?php
 
-namespace At\PhpSettings\Middleware;
+namespace At\PhpSettings;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;

@@ -2,7 +2,6 @@
 
 namespace At\PhpSettings;
 
-use At\PhpSettings\Middleware\PhpSettingsMiddleware;
 use Interop\Container\ContainerInterface;
 
 class PhpSettingsMiddlewareFactory
