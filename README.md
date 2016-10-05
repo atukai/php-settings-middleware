@@ -31,7 +31,7 @@ Add factory to container config
 	'dependencies' => [
 		'factories' => [
 			...
-			At\PhpSettingsMiddleware::class => At\PhpSettingsMiddlewareFactory::class,
+			\At\PhpSettings\PhpSettingsMiddleware::class => \At\PhpSettings\PhpSettingsMiddlewareFactory::class,
 			...
 		],
 	],
@@ -41,7 +41,7 @@ Add the middleware to the pipeline
 ```
 	'middleware' => [
 		...
-		At\PhpSettingsMiddleware::class,
+		\At\PhpSettings\PhpSettingsMiddleware::class,
 		...
 	],	
 ```
