@@ -3,7 +3,6 @@
 namespace At\PhpSettings;
 
 use At\PhpSettings\Middleware\PhpSettingsMiddleware;
-use Interop\Container\ContainerInterface;
 
 class ConfigProvider
 {
@@ -12,9 +11,7 @@ class ConfigProvider
         return [
             'dependencies' => [
                 'factories' => [
-                    PhpSettingsMiddleware::class => function(ContainerInterface $c) {
-                        return new PhpSettingsMiddleware();
-                    },
+                    PhpSettingsMiddleware::class => PhpSettingsMiddlewareFactory::class,
                 ],
             ],
 

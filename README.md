@@ -5,25 +5,12 @@ Managing php settings.
 
 `composer require atukai/php-settings-middleware`
 
-## Usage
-
-**Zend Expressive**:
-
-Include config from ConfigProvider.php. Recommend to use [Expressive Configuration Manager]
-(https://github.com/mtymek/expressive-config-manager)
-
-```php
-$configManager = new ConfigManager([
-    ...,
-    \At\PhpSettings\ConfigProvider::class,
-]);
-``` 
- 
 ## Configuration
 
-To configure the php settings as you required, add the following to your config file:
+To configure the php settings as you required, add the following to your config file
+under `php_setting` key:
 
-```PHP
+```php
 'php_settings' => [
     'display_startup_errors'     => false,
     'display_errors'             => true,
@@ -37,3 +24,40 @@ To configure the php settings as you required, add the following to your config 
         ],
     ],
 ]
+
+Or include config from ConfigProvider.php. Recommend to use [Expressive Configuration Manager] 
+   (https://github.com/mtymek/expressive-config-manager)
+   
+   ```php
+   $configManager = new ConfigManager([
+       ...,
+       \At\PhpSettings\ConfigProvider::class,
+   ]);
+   ``` 
+
+Add factory to container config
+```
+	'dependencies' => [
+		'factories' => [
+			...
+			At\PhpSettingsMiddleware::class => At\PhpSettingsMiddlewareFactory::class,
+			...
+		],
+	],
+```
+
+Add the middleware to the pipeline	
+```
+	'middleware' => [
+		...
+		At\PhpSettingsMiddleware::class,
+		...
+	],	
+```
+
+## PHP Ini Configurations
+
+For more details of PHP ini configurations see
+
+1. http://php.net/manual/en/ini.list.php 
+2. http://php.net/manual/en/configuration.changes.modes.php 

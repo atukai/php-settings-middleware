@@ -18,6 +18,15 @@ class PhpSettingsMiddleware
     protected $settings = [];
 
     /**
+     * PhpSettingsMiddleware constructor.
+     * @param array $settings
+     */
+    public function __construct(array $settings = [])
+    {
+        $this->settings = $settings;
+    }
+
+    /**
      * @param ServerRequestInterface $request
      * @param ResponseInterface $response
      * @param callable $next
